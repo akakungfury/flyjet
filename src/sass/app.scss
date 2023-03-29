@@ -1,0 +1,80 @@
+@import "../../node_modules/normalize-scss/sass/normalize/import-now";
+@import "../../node_modules/custom-select/build/custom-select.css";
+@import "../../node_modules/swiper/swiper-bundle.min.css";
+
+// Abstract
+@import "./abstract/fonts";
+@import "./abstract/constants";
+@import "./abstract/mixins";
+@import "./abstract/placeholders";
+
+// Base
+@import "./base/base";
+// @import "./base/logo";
+@import "./base/icons";
+@import "./base/buttons";
+@import "./base/selects";
+// @import "./base/sliders";
+@import "./base/hamburger-btn";
+// @import "./base/form";
+// @import "./base/popup";
+// @import "./base/figures";
+
+// Layouts
+@import "./layouts/wrapper";
+@import "./layouts/header";
+// @import "./layouts/columns";
+@import "./layouts/footer";
+
+//components
+@import "./components/navigation";
+@import "./components/contacts-list";
+@import "./components/social-links";
+@import "./components/comfort";
+@import "./components/about-us";
+@import "./components/services";
+@import "./components/main-news";
+@import "./components/news-card";
+@import "./components/hamburger-menu";
+// @import "./components/socials";
+// @import "./components/phone-link";
+// @import "./components/breadcrumbs";
+// @import "./components/page-header";
+// @import "./components/place-header";
+// @import "./components/your-games-world";
+// @import "./components/about-club-into";
+// @import "./components/advantages";
+// @import "./components/clubs-intro";
+// @import "./components/prices-intro";
+// @import "./components/arena-intro";
+// @import "./components/games-equipment";
+// @import "./components/game-card";
+// @import "./components/equipment";
+// @import "./components/last-news";
+// @import "./components/news-card";
+// @import "./components/news-header";
+// @import "./components/news";
+// @import "./components/single-news";
+// @import "./components/info-article";
+// @import "./components/games";
+// @import "./components/contacts";
+// @import "./components/our-arenas-header";
+// @import "./components/place-intro";
+// @import "./components/place-advantages";
+// @import "./components/place-game-zones";
+// @import "./components/place-features";
+// @import "./components/place-other-club";
+// @import "./components/prices";
+
+//page
+// @import "./pages/main-page";
+// @import "./pages/all-news-page";
+// @import "./pages/single-news-page";
+// @import "./pages/games-page";
+// @import "./pages/info-page";
+// @import "./pages/our-arenas-page";
+// @import "./pages/about-company";
+// @import "./pages/arena-page";
+// @import "./pages/club-page";
+// @import "./pages/prices-page";
+// @import "./pages/error-page";

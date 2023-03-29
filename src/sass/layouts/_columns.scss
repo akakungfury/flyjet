@@ -1,0 +1,21 @@
+.layout-2-column {
+  @include columns (48.7%);
+}
+.layout-3-column {
+  // @include columns (32.37%)
+  @include columns(calc(100% / 3 - 110px));
+  margin: 0 -55px;
+}
+.layout-4-column {
+  @include columns(calc(100% / 4 - 20px));
+  margin: 0 -10px;
+}
+
+.layout-5-column {
+  @include columns(calc(100% / 5 - 70px));
+  margin: 0 -35px;
+  // @include media-laptop-medium {
+  //   @include columns(calc(100% / 5 - 50px));
+  //   margin: 0 -25px;
+  // }
+}

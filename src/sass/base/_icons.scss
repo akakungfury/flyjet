@@ -1,0 +1,28 @@
+.ico {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  align-self: center;
+}
+
+.ico-slider-arrow {
+  position: relative;
+  left: 2px;
+  height: 18px;
+  width: 10px;
+  background-image: url("../../src/assets/images/general/right-arrow.svg");
+  @include transition-fast();
+  &--mirrored {
+    left: -2px;
+    transform: rotate(180deg);
+  }
+  @include mq("tablet-general-4") {
+    left: 1px;
+    height: 13px;
+    width: 7.43px;
+    &--mirrored {
+      left: -1px;
+    }
+  }
+}

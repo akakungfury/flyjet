@@ -1,0 +1,253 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+a,
+button,
+select,
+input,
+textarea,
+div,
+span {
+  @extend %disableBlueHighlightOnPointer;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  // line-height: 0;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  border: none;
+  outline: none !important;
+  font: inherit;
+}
+
+button {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth !important;
+}
+
+body {
+  @include font-family($primary-font);
+  @include font(false, false, $text-main-color, 400);
+  min-height: 100vh;
+  scroll-behavior: smooth !important;
+  text-rendering: optimizeSpeed;
+
+  // @include mq("tablet-m") {
+  //   font-size: 1.2rem;
+  // }
+}
+
+.body-wrapper {
+  overflow: hidden;
+  // @include mq("desktop-xxl") {
+  //   max-width: 1920px;
+  // }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.visuallyhiddenhav {
+  @extend %visually-hidden;
+}
+
+.lock-scroll {
+  overflow: hidden !important;
+  // height: 100vh !important;
+  height: calc(var(--window-inner-height) - 1px) !important;
+  position: relative !important;
+  touch-action: none;
+  -ms-touch-action: none;
+}
+
+.preload,
+.preload * {
+  transition: none !important;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+main {
+  margin-top: 106px;
+  // @include mq("tablet-general") {
+  //   margin-top: 64px;
+  // }
+
+  @include mq("tablet-general-3") {
+    margin-top: 48px;
+  }
+}
+
+// .title-xl {
+//   @include font(9.6rem, 9.6rem, $color-light-2, 700);
+//   text-transform: uppercase;
+//   @include mq("desktop-m") {
+//     @include font(9rem, 9rem);
+//   }
+//   @include mq("tablet-general-2") {
+//     @include font(3.2rem, 4rem);
+//   }
+// }
+
+.title-l {
+  @include font(5rem, 6rem, false, 700);
+  @include mq("tablet-general-1") {
+    @include font(4rem, 5rem);
+  }
+  @include mq("tablet-s") {
+    @include font(3.4rem, 4.4rem);
+  }
+}
+
+// .title-m {
+//   @include font(6.4rem, 7.2rem, $color-primary, 800);
+//   text-transform: uppercase;
+//   // @include mq("tablet-general-2") {
+//   //   @include font(3.2rem, 4rem);
+//   // }
+// }
+
+// .title-s {
+//   @include font(2rem, 2.8rem, false, 700);
+//   @include mq("tablet-m") {
+//     @include font(1.6rem, 2.4rem);
+//   }
+// }
+
+.description {
+  @include font(1.6rem, 3rem, false, 400);
+  // @include mq("tablet-m") {
+  //   @include font(1.2rem, 2rem);
+  // }
+  @include mq("tablet-s") {
+    @include font(1.4rem, 2.4rem);
+  }
+}
+
+// .block-separator {
+//   height: 50px;
+//   background-color: $color-primary;
+//   background-repeat: repeat;
+//   background-image: url("../../src/assets/images/icons/separator_bg_pattern.svg");
+//   background-position-y: -33px;
+// }
+
+// main > :first-child::before {
+//   @include pseudo();
+//   top: 0;
+//   height: 262px;
+//   width: 100%;
+//   background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+//   @include z-index("main", 3);
+// }
+
+// main.error-page > :first-child::before {
+//   @include pseudo();
+//   top: 0;
+//   height: 120px;
+//   width: 100%;
+//   // background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+//   background: #232323;
+//   @include z-index("main", 3);
+//   @include mq("tablet-m") {
+//     height: 75px;
+//   }
+// }
+
+//TODO: check in mobile browsers
+body {
+  height: 100vh;
+  // @include mq("custom", false, "374px") {
+  //   min-width: 374px;
+  //   width: auto !important; /* Firefox will set width as auto */
+  //   width: 374px;
+  // }
+}
+
+/* Avoid Chrome to see Safari hack */
+@supports (-webkit-touch-callout: none) {
+  body {
+    /* The hack for Safari */
+    height: -webkit-fill-available;
+  }
+}
+
+.body-overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(9px);
+  pointer-events: none;
+  transition: opacity 0.3s ease-in;
+  @include z-index("body-overlay");
+
+  &--shown {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.prevent-download {
+  display: none !important;
+}
+
+.prevent-download-long {
+  display: none !important;
+}

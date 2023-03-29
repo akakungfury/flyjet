@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  src: local("HelveticaNeueCyr Bold"), url("../../src/assets/fonts/HelveticaNeueCyr-Bold.woff2") format("woff2"),
+    url("../../src/assets/fonts/HelveticaNeueCyr-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  src: local("HelveticaNeueCyr"), local("HelveticaNeueCyr Roman"), url("../../src/assets/fonts/HelveticaNeueCyr-Roman.woff2") format("woff2"),
+    url("../../src/assets/fonts/HelveticaNeueCyr-Roman.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  src: local("HelveticaNeueCyr Medium"), url("../../src/assets/fonts/HelveticaNeueCyr-Medium.woff2") format("woff2"),
+    url("../../src/assets/fonts/HelveticaNeueCyr-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Verdana";
+  src: local("Verdana Bold"), url("../../src/assets/fonts/Verdana-Bold.woff2") format("woff2"),
+    url("../../src/assets/fonts/Verdana-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Verdana";
+  src: local("Verdana"), url("../../src/assets/fonts/Verdana.woff2") format("woff2"), url("../../src/assets/fonts/Verdana.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

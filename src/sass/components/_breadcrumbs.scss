@@ -1,0 +1,74 @@
+.breadcrumbs__items {
+  display: inline-flex;
+  flex-wrap: wrap;
+  @include mq("tablet-general-2") {
+    margin-left: -5px;
+  }
+
+  & > li {
+    display: inline-flex;
+    @include mq("tablet-s") {
+      .single-news &,
+      .about-complex-page &,
+      .villa & {
+        margin-bottom: 7px;
+      }
+    }
+
+    &:not(:last-of-type)::after {
+      content: "";
+      display: block;
+      margin: auto 3px;
+      width: 16px;
+      height: 1px;
+      background: $text-color-grey;
+      border-radius: 1px;
+      // @include mq("tablet-s") {
+      //   .sinle-news & {
+      //     position: relative;
+      //     top: -10px;
+      //   }
+      // }
+      @include mq("tablet-s") {
+        margin: auto 0;
+        width: 8px;
+      }
+      @include mq("mobile-xl") {
+        // margin-top: 3px;
+        position: relative;
+        top: 3px;
+      }
+    }
+  }
+}
+
+.breadcrumbs__item {
+  padding: 5px;
+  @include font(1.8rem, 2.4rem, $text-color-grey);
+  @include mq("tablet-general-2") {
+    @include font(1.2rem, 2rem);
+  }
+  @include mq("tablet-s") {
+    // .single-news li:first-of-type & {
+    // .single-news li {
+    //   margin-bottom: 20px;
+    // }
+  }
+  @include mq("mobile-xl") {
+    padding-bottom: 0px;
+    @include font(1.2rem, 1.2rem);
+  }
+
+  @include hover-supported() {
+    color: $color-light-2;
+    @include transition-fast();
+  }
+
+  &--active {
+    color: $color-light;
+    transition: none;
+    @include hover-supported() {
+      color: $color-light;
+    }
+  }
+}

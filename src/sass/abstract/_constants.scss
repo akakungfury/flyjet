@@ -1,0 +1,60 @@
+$color-light: #fff;
+
+$color-dark: #000;
+
+$color-grey2: #808080;
+
+$color-primary: #1d3278;
+$color-secondary: #63acda;
+
+$box-shadow-primary: 0px 4px 45px rgba(29, 50, 120, 0.35);
+$box-shadow-secondary: 0px 4px 30px rgba(99, 172, 218, 0.5);
+
+$text-main-color: #1e1e1e;
+
+//gradients and shadows
+$main-bnt-shadow: 0px 4px 60px rgba(215, 185, 142, 0.5);
+$slider-bnt-shadow: 0px 4px 45px rgba(215, 185, 142, 0.75);
+$main-bnt-hover-shadow: 0px 4px 60px rgba(86, 86, 86, 0.2);
+$text-shadow: 0px 15px 24px rgba(215, 185, 142, 0.55);
+$text-shadow-hover: 0px 15px 24px rgba(255, 255, 255, 0.55);
+
+$primary-font: "HelveticaNeueCyr";
+$secondary-font: "Verdana";
+// $additional-font-1: "HelveticaNeueCyr";
+
+$content-width: 1920px;
+
+$margin-eq-wrapper-padding: 130px;
+
+$breakpoints: (
+  "mobile-s": 360px,
+  "mobile-g-3": 375px,
+  "mobile-m": 380px,
+  "mobile-g-2": 395px,
+  "mobile-g-1": 405px,
+  "mobile-l": 420px,
+  "mobile-xl": 500px,
+  "tablet-s": 580px,
+  "tablet-general-4": 760px,
+  "tablet-m": 768px,
+  "tablet-l": 850px,
+  "tablet-general-3": 1015px,
+  "tablet-xl": 1024px,
+  "tablet-general-2": 1100px,
+  "tablet-general-1": 1200px,
+  "desktop-xs": 1280px,
+  "desktop-s": 1370px,
+  "desktop-m": 1440px,
+  "desktop-l": 1550px,
+  "desktop-xl": 1650px,
+  "desktop-xxl": 1920px,
+);
+
+$z-indexes: (
+  "main": 0,
+  "header": 100,
+  "hamburger-menu": 200,
+  "body-overlay": 400,
+  "popup": 500,
+);

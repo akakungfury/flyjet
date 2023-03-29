@@ -1,0 +1,59 @@
+.navigation {
+  display: flex;
+}
+
+.navigation__item {
+  &:not(:last-of-type) {
+    margin-right: 52px;
+    @include mq("desktop-xl") {
+      margin-right: 30px;
+    }
+    @include mq("desktop-l") {
+      margin-right: 25px;
+    }
+    @include mq("tablet-general-1") {
+      margin-right: 20px;
+    }
+    // @include mq("tablet-general-2") {
+    //   margin-right: 48px;
+    // }
+  }
+}
+
+.navigation__link {
+  display: block;
+  position: relative;
+  padding: 5px 0;
+  @include font(1.7rem, 2.6rem, $text-main-color, 500);
+  @include transition-fast();
+  white-space: nowrap;
+  @include mq("desktop-l") {
+    @include font(1.5rem, 2.4rem);
+  }
+  @include mq("tablet-general-1") {
+    @include font(1.2rem, 2.2rem);
+  }
+  // @include mq("tablet-general-2") {
+  //   @include font(1.4rem, 1.4rem);
+  // }
+
+  &:after {
+    @include pseudo();
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    color: transparent;
+    background: $color-primary;
+    height: 1px;
+    @include transition-fast();
+  }
+
+  @include hover-supported() {
+    color: $color-primary;
+    &:after {
+      width: 100%;
+    }
+  }
+}

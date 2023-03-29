@@ -1,0 +1,96 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 23px 0 21px;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  @include font(1.6rem, 1.6rem, $color-light, 500);
+  white-space: nowrap;
+  cursor: pointer;
+  @include transition-fast();
+
+  &--main {
+    background: $color-secondary;
+    box-shadow: $box-shadow-secondary;
+  }
+
+  &--secondary {
+    border-color: $color-secondary;
+    background: transparent;
+    color: $color-secondary;
+  }
+
+  // &--transparent {
+  //   color: $color-light-2;
+  //   background: transparent;
+  //   border: 1px solid $color-light-2;
+  // }
+
+  @include hover-supported() {
+    &.btn--main {
+      background: $color-primary;
+      box-shadow: $box-shadow-primary;
+    }
+
+    &.btn--secondary {
+      border-color: $color-primary;
+      background: $color-primary;
+      color: $color-light;
+      // box-shadow: $box-shadow-primary;
+    }
+
+    // &.btn--transparent {
+    //   color: $color-dark-blue;
+    //   background: $color-light-2;
+    // }
+
+    // animation-play-state: paused;
+    // & > .gradient {
+    //   opacity: 1;
+    //   @include transition-fast(opacity);
+    // }
+  }
+
+  @include mq("tablet-m") {
+    @include font(1.5rem, 1.5rem);
+    padding: 18px 0 15px;
+  }
+}
+
+.circle-btn {
+  @include flex-center();
+  width: 65px;
+  height: 65px;
+  background: transparent;
+  border: 2px solid $color-primary;
+  border-radius: 50%;
+  cursor: pointer;
+  @include transition-fast("background");
+  @include hover-supported() {
+    background-color: $color-primary;
+    .ico-slider-arrow {
+      background-image: url("../../src/assets/images/general/right-arrow-hovered.svg");
+    }
+  }
+  @include mq("tablet-l") {
+    width: 50px;
+    height: 50px;
+  }
+  // @include mq("tablet-general") {
+  //   width: 40px;
+  //   height: 40px;
+  //   background-color: $color-light-2;
+  //   .ico-slider-arrow {
+  //     background-image: url("../../src/assets/images/icons/slider_arrow_hovered.svg");
+  //     width: 8px;
+  //     height: 14px;
+  //   }
+  // }
+  // @include mq("tablet-general-2") {
+  //   background: transparent;
+  //   .ico-slider-arrow {
+  //     background-image: url("../../src/assets/images/icons/slider_arrow.svg");
+  //   }
+  // }
+}

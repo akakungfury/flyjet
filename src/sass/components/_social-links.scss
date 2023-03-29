@@ -1,0 +1,27 @@
+.social-links {
+  display: flex;
+
+  > img {
+    width: 30px;
+    height: 30px;
+  }
+  @include mq("desktop-s") {
+    > img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
+
+.social-item {
+  &:not(:last-of-type) {
+    margin-right: 10px;
+    @include mq("desktop-s") {
+      margin-right: 8px;
+    }
+  }
+}
+
+.social-link {
+  display: block;
+}

@@ -1,0 +1,68 @@
+.comfort {
+}
+
+.comfort__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 0px;
+  @include mq("tablet-general-3") {
+    flex-direction: column-reverse;
+    padding: 0 0px 45px;
+  }
+}
+
+.comfort__text-container {
+  max-width: 875px;
+  margin-right: 20px;
+  @include mq("desktop-l") {
+    width: 50%;
+  }
+  @include mq("tablet-general-3") {
+    width: 100%;
+    max-width: unset;
+    margin-right: 0;
+    padding: 0 40px;
+  }
+  @include mq("tablet-l") {
+    padding: 0 20px;
+  }
+}
+
+.comfort_img-container {
+  max-width: 810px;
+  width: 50%;
+  flex-shrink: 0;
+  @include mq("tablet-general-3") {
+    width: 100%;
+    // max-width: unset;
+    max-width: 510px;
+    margin-bottom: 40px;
+    align-self: flex-start;
+  }
+}
+
+.comfort__title {
+  margin-bottom: 15px;
+  span:first-of-type {
+    color: $color-primary;
+  }
+  @include mq("tablet-s") {
+    @include font(2.8rem, 3.5rem);
+  }
+}
+
+.comfort__description {
+  margin-bottom: 70px;
+  @include mq("tablet-general-1") {
+    margin-bottom: 40px;
+  }
+  @include mq("tablet-s") {
+    @include font(1.3rem, 2.4rem);
+  }
+}
+
+.comfort__btn {
+  width: 225px;
+  margin-bottom: 18px;
+}
