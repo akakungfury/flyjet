@@ -6,7 +6,8 @@
     "scripts": {
         "start": "NODE_ENV=development webpack serve --open",
         "dev": "NODE_ENV=development webpack",
-        "build": "NODE_ENV=production webpack"
+        "build": "NODE_ENV=production webpack",
+        "safari-start": "NODE_ENV=development webpack serve --open --host 0.0.0.0 --port 3000"
     },
     "browserslist": [
         "last 2 versions",
@@ -41,6 +42,6 @@
         "aos": "^3.0.0-beta.6",
         "custom-select": "^1.1.15",
         "normalize-scss": "^7.0.1",
-        "swiper": "7.1.0"
+        "swiper": "8.4.7"
     }
 }

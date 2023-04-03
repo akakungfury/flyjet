@@ -13,6 +13,7 @@ module.exports = {
     entry: {
         app: "./src/js/app.js",
         sliders: "./src/js/sliders.js",
+        sliders2: "./src/js/sliders-v9.js",
     },
     ignoreWarnings: [
         {
@@ -46,6 +47,13 @@ module.exports = {
             chunks: ["app", "sliders"],
             // chunks: ["index", "sliders", "fancybox"],
             filename: "index.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/pages/air-park/air-park.html",
+            inject: "body",
+            chunks: ["app", "sliders", "sliders2"],
+            // chunks: ["index", "sliders", "fancybox"],
+            filename: "air-park.html",
         }),
         // new HtmlWebpackPlugin({
         //     template: "./src/pages/news/news.html",

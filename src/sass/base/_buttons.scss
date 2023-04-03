@@ -67,10 +67,22 @@
   border-radius: 50%;
   cursor: pointer;
   @include transition-fast("background");
+
+  &--white {
+    border-color: $color-light;
+  }
+  &--disabled {
+    opacity: 0.5;
+  }
+
   @include hover-supported() {
     background-color: $color-primary;
     .ico-slider-arrow {
       background-image: url("../../src/assets/images/general/right-arrow-hovered.svg");
+    }
+
+    &--white {
+      background-image: url("../../src/assets/images/general/right-arrow.svg");
     }
   }
   @include mq("tablet-l") {

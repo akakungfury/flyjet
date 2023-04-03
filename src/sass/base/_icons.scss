@@ -6,6 +6,7 @@
   align-self: center;
 }
 
+.ico-slider-arrow-white,
 .ico-slider-arrow {
   position: relative;
   left: 2px;
@@ -25,4 +26,8 @@
       left: -1px;
     }
   }
+}
+
+.ico-slider-arrow-white {
+  background-image: url("../../src/assets/images/general/right-arrow-hovered.svg");
 }

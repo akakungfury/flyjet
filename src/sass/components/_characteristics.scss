@@ -1,0 +1,51 @@
+.characteristics {
+  @include columns(calc(100% / 4 - 20px), -10px);
+  justify-content: flex-start;
+  @include mq("desktop-l") {
+    @include columns(calc(100% / 3 - 20px), -10px);
+  }
+  @include mq("desktop-m") {
+    @include columns(calc(100% / 3 - 14px), -7px);
+  }
+  @include mq("desktop-s") {
+    @include columns(calc(100% / 2 - 20px), -10px);
+  }
+  @include mq("tablet-general-1") {
+    @include columns(calc(100% / 2 - 14px), -7px);
+  }
+  @include mq("tablet-general-4") {
+    @include columns(calc(100% / 2 - 10px), -5px);
+  }
+  @include mq("mobile-s") {
+    @include columns(100%, 0);
+  }
+}
+
+.characteristics-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(248, 248, 248, 0.1);
+  padding: 20px 5px;
+  min-width: 155px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  @include mq("tablet-general-4") {
+    padding: 10px 5px;
+  }
+}
+.characteristics-card__title {
+  @include font(1.3rem, 1.8rem, $color-light, 500);
+  @include mq("tablet-general-4") {
+    @include font(1.2rem, 1.6rem);
+  }
+}
+.characteristics-card__description {
+  @include font(1.5rem, 1.8rem, $color-light, 700);
+
+  span:first-of-type {
+    font-weight: 500;
+  }
+}

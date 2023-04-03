@@ -1,6 +1,8 @@
 @import "../../node_modules/normalize-scss/sass/normalize/import-now";
 @import "../../node_modules/custom-select/build/custom-select.css";
-@import "../../node_modules/swiper/swiper-bundle.min.css";
+// @import "../../node_modules/swiper/swiper-bundle.min.css";
+@import "../../node_modules/swiper/modules/thumbs/thumbs.min.css";
+@import "./layouts/swiper-bundle.min.css";
 
 // Abstract
 @import "./abstract/fonts";
@@ -36,6 +38,12 @@
 @import "./components/main-news";
 @import "./components/news-card";
 @import "./components/hamburger-menu";
+@import "./components/air-park-ticker";
+@import "./components/boards-controlling";
+@import "./components/have-questions";
+@import "./components/commercial-flights";
+@import "./components/characteristics";
+@import "./components/custom-slider";
 // @import "./components/socials";
 // @import "./components/phone-link";
 // @import "./components/breadcrumbs";

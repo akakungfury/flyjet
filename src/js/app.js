@@ -149,6 +149,10 @@ window.addEventListener("load", () => {
         document.body.classList.toggle("lock-scroll");
         // // document.documentElement.classList.toggle("is-locked");
 
+        if(hamburgerBtn.classList.contains('hamburger-menu--opened')){
+          setTimeout(() => closeAllHamburgerSubmenus(), 500);
+        }
+        // closeAllHamburgerSubmenus()
         hamburgerBtn.classList.toggle('hamburger-menu--opened');
         document.querySelector('.menu__span:first-child').classList.toggle('minus_rotate');
         document.querySelector('.menu__span:nth-child(2)').classList.toggle('none');
@@ -170,6 +174,30 @@ window.addEventListener("load", () => {
       }
     })
 
+
+    const hamburgerSubmenuBtns = document.querySelectorAll('.hamburger-menu__submenu');
+    const hamburgerSubmenus = document.querySelectorAll('.hamburger-menu__submenu-container');
+    const hamburgerSubmenuBackBtn = document.querySelectorAll('.hamburger-menu__back-btn');
+    function closeAllHamburgerSubmenus() {
+      hamburgerSubmenus.forEach(submenu => {
+        hamburgerMenu.classList.remove('hamburger-menu--submenu');
+        submenu.classList.remove('hamburger-menu__submenu-container--showed')
+      })
+    }
+
+    hamburgerSubmenuBtns.forEach((submenuBtn, index) => {
+      submenuBtn.addEventListener('click', () => {
+        console.log(index);
+        hamburgerMenu.classList.add('hamburger-menu--submenu');
+        hamburgerSubmenus[index].classList.add('hamburger-menu__submenu-container--showed')
+      })
+    })
+
+    hamburgerSubmenuBackBtn.forEach((submenuBtn) => {
+      submenuBtn.addEventListener('click', () => {
+        closeAllHamburgerSubmenus();
+      })
+    })
 
     // allAnchorLinks.forEach(link => {
     //     link.addEventListener('click', () => {

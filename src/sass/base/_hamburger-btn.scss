@@ -261,6 +261,7 @@
   }
 
   .hamburger-menu__submenu {
+    position: relative;
     width: 100%;
     padding-bottom: 14px;
     border-bottom: 1px solid rgba(208, 208, 208, 0.5);
@@ -276,6 +277,15 @@
           height: 21px;
         }
       }
+    }
+
+    &::after {
+      @include pseudo();
+      top: calc(50% + 2px);
+      right: 5px;
+      width: 4px;
+      height: 7px;
+      background-image: url("../../src/assets/images/general/hamburget-rigth-arrow.svg");
     }
   }
 
@@ -352,4 +362,103 @@
       max-width: 430px;
     }
   }
+}
+
+// hamburger submenus
+
+.hamburger-menu.hamburger-menu--submenu {
+  .hamburger-menu__btn {
+    transition: opacity 0.2s ease-in, padding 0s 0.2s;
+    opacity: 0;
+    padding: 0px;
+  }
+}
+
+.hamburger-menu__contact-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.hamburger-menu__contact-list {
+  display: flex;
+  position: relative;
+  // overflow: hidden;
+  padding: 0 20px;
+  // transition: overflow 0.6 0.6s;
+
+  .contact-list {
+    position: absolute;
+    top: -10px;
+    // opacity: 0;
+    max-height: 0;
+    transform: translateX(-8%);
+  }
+
+  .contact-list__title {
+    margin-bottom: 20px;
+    width: 230px;
+    @include font(1.6rem, 2.6rem);
+  }
+
+  .contact-list__items {
+    margin-bottom: 24px;
+  }
+
+  .contact-item:not(:last-of-type) {
+    margin-bottom: 18px;
+  }
+
+  .contact-link {
+    @include font(2.4rem, 3rem);
+    span:nth-of-type(2) {
+      color: $color-primary !important;
+    }
+  }
+
+  .social-links {
+    padding-top: 30px;
+  }
+}
+
+.hamburger-menu__back-btn {
+  background-color: $color-primary;
+  box-shadow: none;
+  width: 139px;
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  @include font(1rem, 1rem, $color-light, 500);
+}
+
+.hamburger-menu__submenu-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: $color-light;
+  @include transition-fast();
+  transform: translateX(150%);
+
+  .lang-select__item {
+    padding: 14px 0;
+    border-bottom: 1px solid #d0d0d0;
+    > span {
+      text-transform: capitalize;
+    }
+    &--active {
+      font-weight: 700;
+    }
+  }
+
+  &.hamburger-menu__submenu-container--showed {
+    transform: translateX(0);
+  }
+}
+
+.hamburger-menu__main-container {
+  position: relative;
+  > * {
+    width: 100%;
+    flex-shrink: 0;
+  }
+  display: flex;
 }

@@ -1,0 +1,35 @@
+// .airplanes-swiper {
+//   width: 100%;
+// }
+
+.airplanes-swiper__wrapper {
+  // display: flex;
+  // width: 100%;
+  // max-width: $content-width;
+  // margin: 0 auto;
+}
+
+.airplanes-swiper {
+  width: 100%;
+  overflow: hidden;
+  // margin: 0 auto;
+  // padding: 20px 130px 90px;
+}
+
+.airplanes-swiper__slides-wrapper {
+  display: flex;
+  transition: all 0.5s ease;
+}
+
+.airplanes-swiper__slide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  width: 100%;
+  padding-bottom: 50px;
+  // max-width: 1660px;
+  @include mq("tablet-general-3") {
+    flex-direction: column;
+  }
+}
