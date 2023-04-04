@@ -131,6 +131,7 @@
   padding: 4px 0;
   align-items: flex-end;
   transition: transform 0.3s ease-out;
+  background-color: $color-light;
   //transition: transform 0.5s ease;
   //transition: background-color 0.1s ease;
   //transition: width 0.5s ease;
@@ -147,10 +148,12 @@
     left: -4px;
     width: 140%;
     height: 140%;
+    background-color: $color-light;
     border-radius: 50%;
     border: 1px solid $color-secondary;
     opacity: 0;
     transition: opacity 0s;
+    z-index: -1;
   }
 
   &.hamburger-menu--opened {
@@ -271,6 +274,17 @@
 
       .contact-link {
         @include font(1.8rem, 2.4rem, $text-main-color, 700);
+        pointer-events: none !important;
+        text-decoration: none !important;
+        color: $text-main-color !important;
+        a,
+        div,
+        a[href^="tel"] {
+          // color: inherit !important;
+          pointer-events: none !important;
+          text-decoration: none !important;
+          color: $text-main-color !important;
+        }
 
         > img {
           width: 21px;
@@ -421,12 +435,23 @@
 }
 
 .hamburger-menu__back-btn {
+  justify-content: flex-start;
   background-color: $color-primary;
   box-shadow: none;
   width: 139px;
   margin-bottom: 30px;
-  padding: 10px 20px;
+  padding: 11px 20px 9px;
   @include font(1rem, 1rem, $color-light, 500);
+
+  &:before {
+    @include pseudo();
+    position: relative;
+    top: -1px;
+    margin-right: 7px;
+    width: 6px;
+    height: 10px;
+    background-image: url("../../src/assets/images/general/hamburget-left-arrow.svg");
+  }
 }
 
 .hamburger-menu__submenu-container {

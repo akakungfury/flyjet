@@ -6,6 +6,9 @@
   @include mq("tablet-general-1") {
     max-width: 510px;
   }
+  @include mq("tablet-general-3") {
+    margin: 0 auto 25px;
+  }
 
   @include hover-supported() {
     transform: translateY(-10px);

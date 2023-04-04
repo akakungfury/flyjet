@@ -7,6 +7,7 @@
     <meta name="description" content="Flyjet description”">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,7 +46,7 @@
                                     <a href="#calculator" class="navigation__link">О компании </a>
                                 </li>
                                 <li class="navigation__item">
-                                    <a href="../air-park.html" class="navigation__link">Воздушный парк</a>
+                                    <a href="./air-park.html" class="navigation__link">Воздушный парк</a>
                                 </li>
                                 <li class="navigation__item">
                                     <a href="#about" class="navigation__link">Новости</a>
@@ -161,7 +162,7 @@
                                 <a href="./" class="navigation__link">О компании</a>
                             </li>
                             <li class="navigation__item">
-                                <a href="../air-park.html" class="navigation__link">Воздушный парк</a>
+                                <a href="./air-park.html" class="navigation__link">Воздушный парк</a>
                             </li>
                             <li class="navigation__item">
                                 <a href="./" class="navigation__link">Новости</a>
@@ -289,56 +290,64 @@
             <section class="comfort">
                 <div class="comfort__wrapper wrapper">
                     <div class="comfort__text-container">
-                        <h2 class="comfort__title title-l">
+                        <h2 class="comfort__title title-l" data-aos="fade-zoom-in" data-aos-easing="ease-in-out"
+                            data-aos-delay="600" data-aos-offset="0" data-aos-duration="500">
                             <Span>Комфорт</Span><span> — это то,<br> ради чего мы работаем</span>
                         </h2>
-                        <div class="comfort__description description">Каждый полет на частном самолете компании FlyJet
-                            проходит мягко и спокойно. Моментальный транзит через терминал и охрану, отсутствие очередей
-                            и конфиденциальность — и вы уже на одном из наших частных, роскошно оборудованных самолетов,
+                        <div class="comfort__description description" data-aos="fade-zoom-in"
+                            data-aos-easing="ease-in-out" data-aos-delay="1200" data-aos-offset="0"
+                            data-aos-duration="500">Каждый полет на частном самолете компании FlyJet проходит мягко и
+                            спокойно. Моментальный транзит через терминал и охрану, отсутствие очередей и
+                            конфиденциальность — и вы уже на одном из наших частных, роскошно оборудованных самолетов,
                             который доставит вас в пункт назначения.</div>
-                        <div class="comfort__btn-container">
+                        <div class="comfort__btn-container" data-aos="fade-zoom-in" data-aos-easing="ease-in-out"
+                            data-aos-delay="1700" data-aos-offset="0" data-aos-duration="500">
                             <button class="comfort__btn btn btn--secondary">Связаться с нами</button>
                         </div>
                     </div>
-                    <div class="comfort_img-container">
-                        <picture></picture>
+                    <div class="comfort_img-container" data-aos="fade-left" data-aos-delay="200" id="maintrg">
+                        <!-- <img class="circle lax lax_preset_spin:2105:149" -->
+                        <img class="circle lax lax_preset_spin:700:40"
+                            src="../../assets/images/general/circle-with-plane.svg" alt="Content img">
                         <!-- <img src="../../assets/images/general/main-block-img.png" alt="Content image"> -->
                         <picture>
                             <source srcset="../../assets/images/general/main-block-img-mob.png"
                                 media="(max-width: 1015px)">
-                            <img src="../../assets/images/general/main-block-img.png" alt="Content image">
+                            <img src="../../assets/images/general/main-block-img-new.png" alt="Content image">
                         </picture>
                     </div>
                 </div>
             </section>
-            <section class="about-us">
+            <section class="about-us" data-aos="fade-left">
                 <div class="about-us__wrapper wrapper">
                     <div class="about-us__text-container">
                         <div class="about-us__title-container">
                             <div class="about-us__bg-title">О нас</div>
-                            <h2 class="about-us__title title-l">О нас</h2>
+                            <h2 class="about-us__title title-l" data-aos="fade-left" id="autg1" data-aos-delay="100">О
+                                нас</h2>
                         </div>
                         <div class="about-us__description description">
-                            <p>2010 год для Авиакомпании FlyJet.kz ознаменован реализацией более масштабных и
-                                стратегических планов по развитию компании. «Fly Jet.kz» начала использовать воздушные
-                                суда западного и американского производства. Авиакомпанией был освоен новый тип ВС,
-                                первый среднемагистральный самолет Citation X Cessna 750, а компания вышла на новый
-                                уровень развития бизнес-авиации в Казахстане.</p>
-                            <p>Одной из приоритетных стратегий Авиакомпании, со дня основания, была цель занять
-                                лидирующее положение в сфере VIP-авиаперевозок, нерегулярных коммерческих рейсов.</p>
-                            <p>Все виды полетов строго регламентированы стандартами ИКАО и действующим законодательством
-                                РК.</p>
+                            <p data-aos="fade-left" data-aos-delay="100">2010 год для Авиакомпании FlyJet.kz ознаменован
+                                реализацией более масштабных и стратегических планов по развитию компании. «Fly Jet.kz»
+                                начала использовать воздушные суда западного и американского производства. Авиакомпанией
+                                был освоен новый тип ВС, первый среднемагистральный самолет Citation X Cessna 750, а
+                                компания вышла на новый уровень развития бизнес-авиации в Казахстане.</p>
+                            <p data-aos="fade-left" data-aos-delay="100">Одной из приоритетных стратегий Авиакомпании,
+                                со дня основания, была цель занять лидирующее положение в сфере VIP-авиаперевозок,
+                                нерегулярных коммерческих рейсов.</p>
+                            <p data-aos="fade-left" data-aos-delay="100">Все виды полетов строго регламентированы
+                                стандартами ИКАО и действующим законодательством РК.</p>
                         </div>
                     </div>
-                    <div class="about-us__img">
+                    <div class="about-us__img" data-aos="fade-left">
                     </div>
                 </div>
             </section>
             <section class="services">
                 <div class="services__wrapper wrapper">
                     <div class="services__top-container">
-                        <div class="services__title title-l">Услуги</div>
-                        <div class="services-swiper__navigation">
+                        <h2 class="services__title title-l" data-aos="fade-left">Услуги</h2>
+                        <div class="services-swiper__navigation" data-aos="fade-left">
                             <div class="slider-btn circle-btn services-swiper__prev-btn">
                                 <div class="ico ico-slider-arrow ico-slider-arrow--mirrored"></div>
                             </div>
@@ -348,99 +357,122 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper-container services-swiper">
+                <div class="swiper-container services-swiper" data-aos="zoom-in-up" data-aos-offset="250">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide services-slide">
                             <div class="services-slide__number">1</div>
-                            <img src="../../assets/images/general/services-img-2.jpg" alt="Название услуги"
-                                class="services-slide__image">
+                            <div class="services-slide__image-container">
+                                <img src="../../assets/images/general/services-img-2.jpg" alt="Название услуги"
+                                    class="services-slide__image">
+                                <div class="bb__line-plane"></div>
+                            </div>
                             <h3 class="services-slide__description">Расширенные услуги для пассажира в процессе полета
                             </h3>
                         </div>
                         <div class="swiper-slide services-slide">
                             <div class="services-slide__number">2</div>
-                            <img src="../../assets/images/general/services-img-2.jpg" alt="Название услуги"
-                                class="services-slide__image">
+                            <div class="services-slide__image-container">
+                                <img src="../../assets/images/general/services-img-2.jpg" alt="Название услуги"
+                                    class="services-slide__image">
+                                <div class="bb__line-plane"></div>
+                            </div>
                             <h3 class="services-slide__description">Предоставление воздушных судов из нашего авиапарка
                             </h3>
                         </div>
                         <div class="swiper-slide services-slide">
                             <div class="services-slide__number">3</div>
-                            <img src="../../assets/images/general/services-img-2.jpg" alt="Название услуги"
-                                class="services-slide__image">
+                            <div class="services-slide__image-container">
+                                <img src="../../assets/images/general/services-img-2.jpg" alt="Название услуги"
+                                    class="services-slide__image">
+                                <div class="bb__line-plane"></div>
+                            </div>
                             <h3 class="services-slide__description">Организация и планирование Вашего рейса</h3>
                         </div>
                         <div class="swiper-slide services-slide">
                             <div class="services-slide__number">4</div>
-                            <img src="../../assets/images/general/services-img-2.jpg" alt="Название услуги"
-                                class="services-slide__image">
+                            <div class="services-slide__image-container">
+                                <img src="../../assets/images/general/services-img-2.jpg" alt="Название услуги"
+                                    class="services-slide__image">
+                                <div class="bb__line-plane"></div>
+                            </div>
                             <h3 class="services-slide__description">Организация и планирование Вашего рейса</h3>
                         </div>
                         <div class="swiper-slide services-slide">
                             <div class="services-slide__number">5</div>
-                            <img src="../../assets/images/general/services-img-2.jpg" alt="Название услуги"
-                                class="services-slide__image">
+                            <div class="services-slide__image-container">
+                                <img src="../../assets/images/general/services-img-2.jpg" alt="Название услуги"
+                                    class="services-slide__image">
+                                <div class="bb__line-plane"></div>
+                            </div>
                             <h3 class="services-slide__description">Организация и планирование Вашего рейса</h3>
                         </div>
                     </div>
                 </div>
             </section>
             <section class="main-news">
-                <div class="main-news__wrapper wrapper">
+                <div class="main-news__wrapper wrapper" data-aos="fade-up" data-aos-delay="100">
                     <div class="main-news__top-container">
                         <div class="main-news__title-container">
                             <div class="main-news__bg-title">Новости</div>
-                            <h2 class="main-news__title title-l">Новости</h2>
+                            <h2 class="main-news__title title-l" data-aos="fade-left" data-aos-delay="100" id="mntg">
+                                Новости</h2>
                         </div>
-                        <div class="main-news__btn-container">
+                        <div class="main-news__btn-container" data-aos="fade-up" data-aos-anchor="#mntg"
+                            data-aos-delay="300">
                             <button class="main-news__btn btn btn--secondary">Больше новостей</button>
                         </div>
                     </div>
                 </div>
                 <div class="wrapper">
                     <div class="main-news__gallery">
-                        <a href="#" class="news-card">
-                            <div class="news-card__img-container">
-                                <img src="../../assets/images/general/news-card-img.jpg" alt="News title"
-                                    class="news-card__img">
-                                <div class="news-card__btn">Читать полностью</div>
-                            </div>
-                            <div class="news-card__title">АУДИТ «CREDIT SUISSE»</div>
-                            <div class="news-card__description">Уважаемые Господа! В июле 2019 года, авиакомпания
-                                «FlyJet.kz» прошла аудит от европейского банка «Сredit Suisse» для проверки деятельности
-                                и эксплуатации воздушных судов. По итогам аудиторского отчёта наша авиакомпания является
-                                единственной в Казахстане, которая может управлять воздушными судами купленными по
-                                льготным кредитам через «Credit Suisse».</div>
-                        </a>
-                        <a href="#" class="news-card">
-                            <div class="news-card__img-container">
-                                <img src="../../assets/images/general/news-card-img.jpg" alt="News title"
-                                    class="news-card__img">
-                                <div class="news-card__btn">Читать полностью</div>
-                            </div>
-                            <div class="news-card__title">АУДИТ «CREDIT SUISSE»</div>
-                            <div class="news-card__description">Уважаемые Господа! В июле 2019 года, авиакомпания
-                                «FlyJet.kz» прошла аудит от европейского банка «Сredit Suisse» для проверки деятельности
-                                и эксплуатации воздушных судов. По итогам аудиторского отчёта наша авиакомпания является
-                                единственной в Казахстане, которая может управлять воздушными судами купленными по
-                                льготным кредитам через «Credit Suisse».</div>
-                        </a>
-                        <a href="#" class="news-card">
-                            <div class="news-card__img-container">
-                                <img src="../../assets/images/general/news-card-img.jpg" alt="News title"
-                                    class="news-card__img">
-                                <div class="news-card__btn">Читать полностью</div>
-                            </div>
-                            <div class="news-card__title">АУДИТ «CREDIT SUISSE»</div>
-                            <div class="news-card__description">Уважаемые Господа! В июле 2019 года, авиакомпания
-                                «FlyJet.kz» прошла аудит от европейского банка «Сredit Suisse» для проверки деятельности
-                                и эксплуатации воздушных судов. По итогам аудиторского отчёта наша авиакомпания является
-                                единственной в Казахстане, которая может управлять воздушными судами купленными по
-                                льготным кредитам через «Credit Suisse».</div>
-                        </a>
+                        <div class="news-card__container" data-aos="fade-up" data-aos-delay="50" data-aos-offset="100">
+                            <a href="#" class="news-card">
+                                <div class="news-card__img-container">
+                                    <img src="../../assets/images/general/news-card-img.jpg" alt="News title"
+                                        class="news-card__img">
+                                    <div class="news-card__btn">Читать полностью</div>
+                                </div>
+                                <div class="news-card__title">АУДИТ «CREDIT SUISSE»</div>
+                                <div class="news-card__description">Уважаемые Господа! В июле 2019 года, авиакомпания
+                                    «FlyJet.kz» прошла аудит от европейского банка «Сredit Suisse» для проверки
+                                    деятельности и эксплуатации воздушных судов. По итогам аудиторского отчёта наша
+                                    авиакомпания является единственной в Казахстане, которая может управлять воздушными
+                                    судами купленными по льготным кредитам через «Credit Suisse».</div>
+                            </a>
+                        </div>
+                        <div class="news-card__container" data-aos="fade-up" data-aos-delay="150" data-aos-offset="100">
+                            <a href="#" class="news-card">
+                                <div class="news-card__img-container">
+                                    <img src="../../assets/images/general/news-card-img.jpg" alt="News title"
+                                        class="news-card__img">
+                                    <div class="news-card__btn">Читать полностью</div>
+                                </div>
+                                <div class="news-card__title">АУДИТ «CREDIT SUISSE»</div>
+                                <div class="news-card__description">Уважаемые Господа! В июле 2019 года, авиакомпания
+                                    «FlyJet.kz» прошла аудит от европейского банка «Сredit Suisse» для проверки
+                                    деятельности и эксплуатации воздушных судов. По итогам аудиторского отчёта наша
+                                    авиакомпания является единственной в Казахстане, которая может управлять воздушными
+                                    судами купленными по льготным кредитам через «Credit Suisse».</div>
+                            </a>
+                        </div>
+                        <div class="news-card__container" data-aos="fade-up" data-aos-delay="200" data-aos-offset="100">
+                            <a href="#" class="news-card">
+                                <div class="news-card__img-container">
+                                    <img src="../../assets/images/general/news-card-img.jpg" alt="News title"
+                                        class="news-card__img">
+                                    <div class="news-card__btn">Читать полностью</div>
+                                </div>
+                                <div class="news-card__title">АУДИТ «CREDIT SUISSE»</div>
+                                <div class="news-card__description">Уважаемые Господа! В июле 2019 года, авиакомпания
+                                    «FlyJet.kz» прошла аудит от европейского банка «Сredit Suisse» для проверки
+                                    деятельности и эксплуатации воздушных судов. По итогам аудиторского отчёта наша
+                                    авиакомпания является единственной в Казахстане, которая может управлять воздушными
+                                    судами купленными по льготным кредитам через «Credit Suisse».</div>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="main-news__mob-btn-container">
+                <div class="main-news__mob-btn-container" data-aos="fade-up" data-aos-delay="200">
                     <button class="main-news__mob-btn btn btn--secondary">Больше новостей</button>
                 </div>
             </section>

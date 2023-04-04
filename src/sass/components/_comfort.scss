@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: space-between;
   padding-right: 0px;
+  overflow: hidden;
   @include mq("tablet-general-3") {
     flex-direction: column-reverse;
     padding: 0 0px 45px;
@@ -30,9 +31,12 @@
 }
 
 .comfort_img-container {
+  position: relative;
   max-width: 810px;
   width: 50%;
   flex-shrink: 0;
+  overflow-x: visible;
+  // overflow: hidden;
   @include mq("tablet-general-3") {
     width: 100%;
     // max-width: unset;
@@ -40,29 +44,63 @@
     margin-bottom: 40px;
     align-self: flex-start;
   }
+
+  > .circle {
+    position: absolute;
+    // width: 1620px;
+    width: 200%;
+    max-width: unset;
+    transform: rotate(-35deg);
+    @include mq("tablet-general-3") {
+      display: none;
+    }
+  }
+
+  &--loaded {
+    > .circle {
+      transition: transform 0.8s ease-out;
+      transform: rotate(5deg);
+    }
+  }
 }
 
 .comfort__title {
   margin-bottom: 15px;
+  opacity: 1;
+  @include transition-mid("opacity");
   span:first-of-type {
     color: $color-primary;
   }
   @include mq("tablet-s") {
     @include font(2.8rem, 3.5rem);
   }
+
+  .start-hidden {
+    opacity: 0;
+  }
 }
 
 .comfort__description {
   margin-bottom: 70px;
+  opacity: 1;
   @include mq("tablet-general-1") {
     margin-bottom: 40px;
   }
   @include mq("tablet-s") {
     @include font(1.3rem, 2.4rem);
   }
+
+  .start-hidden {
+    opacity: 0;
+  }
 }
 
 .comfort__btn {
   width: 225px;
   margin-bottom: 18px;
+  opacity: 1;
+
+  .start-hidden {
+    opacity: 0;
+  }
 }

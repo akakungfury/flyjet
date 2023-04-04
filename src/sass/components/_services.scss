@@ -107,6 +107,62 @@
   }
 }
 
+.services-slide__image-container {
+  position: relative;
+}
+
+.bb__line-plane {
+  position: absolute;
+  bottom: 56px;
+  right: 0px;
+  height: 30px;
+  width: 198px;
+  overflow: hidden;
+  @include mq("tablet-s") {
+    width: 100px;
+    height: 16px;
+    bottom: 20px;
+  }
+
+  &:before {
+    @include pseudo();
+    top: calc(50% - 1px);
+    height: 4px;
+    width: 100%;
+    background-color: $color-light;
+    // plane-icon-white.svg
+    @include mq("tablet-s") {
+      height: 2px;
+    }
+  }
+  &::after {
+    @include pseudo();
+    top: 1px;
+    left: -20px;
+    width: 20px;
+    height: 28px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../../src/assets/images/general/plane-icon-white.svg");
+    transition: left 0.55s 0.3s ease-out;
+    opacity: 0;
+    @include mq("tablet-s") {
+      top: 1px;
+      left: -10px;
+      width: 10px;
+      height: 14px;
+    }
+  }
+
+  .swiper-slide-active &::after {
+    left: calc(50% + 20px);
+    opacity: 1;
+    @include mq("tablet-s") {
+      left: calc(50% + 10px);
+    }
+  }
+}
+
 .services-slide__image {
   max-width: 100%;
   width: 100%;
@@ -115,6 +171,9 @@
 
   .swiper-slide-active & {
     box-shadow: 0px 4px 90px rgba(0, 0, 0, 0.14);
+    @include mq("tablet-s") {
+      box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.14);
+    }
   }
 }
 

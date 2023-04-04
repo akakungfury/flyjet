@@ -9,7 +9,7 @@ window.addEventListener("load", () => {
 const tickerSwiperTop = new Swiperv9('.ticker-swiper', {
   loop: true,
   loopedSlides: 2,
-  spaceBetween: 8,
+  // spaceBetween: 8,
   speed: 55000,
   allowTouchMove: false,
   // loopedSlides: 130,
@@ -18,19 +18,23 @@ const tickerSwiperTop = new Swiperv9('.ticker-swiper', {
   // initialSlide: 4,
   autoplay: {
     disableOnInteraction: false,
-    delay: 0,
+    delay: 1000,
   },
-  breakpoints: {
-    1015: {
-      spaceBetween: 20,
-    },
-  },
+  // breakpoints: {
+  //   1015: {
+  //     spaceBetween: 20,
+  //   },
+  // },
 });
 
+// tickerSwiperTop.autoplay.pause()
 
-tickerSwiperTop.on('resize', function () {
-  console.log('tickerSwiperTop.on(resize)')
-  tickerSwiperTop.autoplay.stop()
-  tickerSwiperTop.autoplay.start()
-});
+// setTimeout(() => tickerSwiperTop.autoplay.start(), 1000)
+
+
+// tickerSwiperTop.on('resize', function () {
+//   console.log('tickerSwiperTop.on(resize)')
+//   tickerSwiperTop.autoplay.stop()
+//   tickerSwiperTop.autoplay.start()
+// });
 })

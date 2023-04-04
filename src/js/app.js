@@ -1,10 +1,12 @@
 import AOS from "aos";
 import "../sass/app.scss";
+import lax from 'lax.js'
 
+window.lax = { presets: lax.presets };
 AOS.init({
-    offset: 30,
+    offset: 50,
     delay: 0,
-    duration: 500,
+    duration: 600,
     easing: "ease",
     once: true,
     disableMutationObserver: true,
@@ -13,6 +15,39 @@ AOS.init({
 
 window.addEventListener("load", () => {
     document.querySelectorAll(".preload").forEach((el) => el.classList.remove("preload"));
+
+    const comfortImagesContainer = document.querySelector('.comfort_img-container')
+    setTimeout(() => {
+      comfortImagesContainer.classList.add('comfort_img-container--loaded')
+    lax.init()
+    // // Add a driver that we use to control our animations
+    lax.addDriver('scrollY', function () {
+      return window.scrollY
+    })
+    // // Add animation bindings to elements
+    lax.addElements('.main-news__bg-title', {
+      scrollY: {
+        translateY: [
+          ["elInY", "elCenterY", "elOutY"], {
+            1000: [200, 0, 0],
+            9999: [250, 0, 0],
+          }
+        ]
+      }
+    })
+    lax.addElements('.about-us__bg-title', {
+      scrollY: {
+        translateY: [
+          ["elInY", "elCenterY", "elOutY"], {
+            1000: [200, 0, 0],
+            1200: [0, -60, 20],
+            9999: [250, 0, 0],
+          }
+        ]
+      }
+    })
+    }, 2000);
+    // setTimeout(() => comfortImagesContainer.style.overflow = 'hidden', 1500);
 
     function syncHeight() {
         document.documentElement.style.setProperty(

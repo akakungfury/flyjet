@@ -194,11 +194,11 @@
 
 .header__btn {
   width: 190px;
-  padding: 13px 0 11px;
+  padding: 12px 0 12px;
   @include font(1.4rem, 1.4rem);
   @include mq("desktop-l") {
     width: 160px;
-    padding: 12px 0 10px;
+    padding: 11px 0 11px;
   }
   @include mq("desktop-s") {
     width: 150px;
@@ -208,7 +208,7 @@
   @include mq("tablet-general-1") {
     margin-right: 10px;
     width: 140px;
-    padding: 10px 0 8px;
+    padding: 9px 0 9px;
     font-size: 1.1rem;
     line-height: 1.1rem;
   }

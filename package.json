@@ -41,6 +41,7 @@
     "dependencies": {
         "aos": "^3.0.0-beta.6",
         "custom-select": "^1.1.15",
+        "lax.js": "^2.0.3",
         "normalize-scss": "^7.0.1",
         "swiper": "8.4.7"
     }
