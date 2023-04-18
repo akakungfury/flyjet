@@ -59,7 +59,7 @@
   &--loaded {
     > .circle {
       transition: transform 0.8s ease-out;
-      transform: rotate(5deg);
+      transform: rotate(0deg);
     }
   }
 }
